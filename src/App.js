@@ -1,30 +1,19 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import SideBar from './components/sidebar/SideBar';
 import Content from './components/content/Content';
 
-class App extends Component {
+export default () => {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: true
-    }
-  }
+  const [isOpen, setOpen] = useState(true)
+  const toggle = () => setOpen(!isOpen)
 
-  toggle = () => {
-    this.setState({isOpen: !this.state.isOpen});
-  }
-
-  render() {
-    return (
-      <div className="App wrapper">
-        <SideBar toggle={this.toggle} isOpen={this.state.isOpen}/>
-        <Content toggle={this.toggle} isOpen={this.state.isOpen}/>
-      </div>
-    );
-  }
+  return (
+    <div className="App wrapper">
+      <SideBar toggle={toggle} isOpen={isOpen}/>
+      <Content toggle={toggle} isOpen={isOpen}/>
+    </div>
+  );
 }
 
-export default App;
