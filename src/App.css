@@ -73,7 +73,7 @@ li a.dropdown-toggle::after {
     top: 10%
 }
 
-.sidebar-header > a {
+.sidebar-header > span {
     position: relative;
     float: right;
     margin: .5em;
@@ -107,7 +107,7 @@ li a.dropdown-toggle::after {
       transition: all 0.5s, height 0s;
     }
 
-    .sidebar.is-open > .sidebar-header a{
+    .sidebar.is-open > .sidebar-header span{
       display: unset;
     }
 

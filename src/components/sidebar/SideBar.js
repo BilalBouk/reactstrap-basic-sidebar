@@ -11,7 +11,7 @@ class SideBar extends React.Component {
     return (
       <div className={classNames('sidebar', {'is-open': this.props.isOpen})}>
         <div className="sidebar-header">
-          <a color="info" onClick={this.props.toggle} style={{color: '#fff'}}>&times;</a>
+          <span color="info" onClick={this.props.toggle} style={{color: '#fff'}}>&times;</span>
           <h3>Bootstrap Sidebar</h3>
         </div>
           <Nav vertical className="list-unstyled pb-3">
