@@ -5,13 +5,10 @@ import SubMenu from './SubMenu';
 import { NavItem, NavLink, Nav } from 'reactstrap';
 import classNames from 'classnames';
 
-class SideBar extends React.Component {
-
-  render() {
-    return (
-      <div className={classNames('sidebar', {'is-open': this.props.isOpen})}>
+const SideBar = props => (
+      <div className={classNames('sidebar', {'is-open': props.isOpen})}>
         <div className="sidebar-header">
-          <span color="info" onClick={this.props.toggle} style={{color: '#fff'}}>&times;</span>
+          <span color="info" onClick={props.toggle} style={{color: '#fff'}}>&times;</span>
           <h3>Bootstrap Sidebar</h3>
         </div>
           <Nav vertical className="list-unstyled pb-3">
@@ -32,8 +29,6 @@ class SideBar extends React.Component {
             </NavItem>
           </Nav>
       </div>
-    );
-  }
-}
+  );
 
 export default SideBar;
