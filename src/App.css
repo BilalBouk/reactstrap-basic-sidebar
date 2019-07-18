@@ -81,6 +81,23 @@ li a.dropdown-toggle::after {
     cursor: pointer;
     display: none;
 }
+.side-menu {
+  height: calc(100vh - 130px);
+  overflow-y: scroll;
+}
+
+.side-menu::-webkit-scrollbar {
+  width: 10px;
+}
+
+.side-menu::-webkit-scrollbar-thumb {
+  background: #5466B3; 
+  border-radius: 3px;
+}
+
+.side-menu::-webkit-scrollbar-thumb:hover {
+  background: #3A4C99; 
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE

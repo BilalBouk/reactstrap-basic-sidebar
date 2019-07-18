@@ -12,6 +12,7 @@ const SideBar = props => (
         <span color="info" onClick={props.toggle} style={{color: '#fff'}}>&times;</span>
         <h3>Bootstrap Sidebar</h3>
       </div>
+      <div className="side-menu">
         <Nav vertical className="list-unstyled pb-3">
           <p>Dummy Heading</p>
           <SubMenu title="Home" icon={faHome} items={submenus[0]}/>
@@ -36,7 +37,8 @@ const SideBar = props => (
               <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact
             </NavLink>
           </NavItem>
-        </Nav>
+        </Nav>        
+      </div>
     </div>
   );
 
