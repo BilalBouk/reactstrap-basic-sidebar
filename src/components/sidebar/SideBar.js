@@ -4,6 +4,7 @@ import { faHome, faBriefcase, faPaperPlane, faQuestion, faImage, faCopy } from '
 import SubMenu from './SubMenu';
 import { NavItem, NavLink, Nav } from 'reactstrap';
 import classNames from 'classnames';
+import {Link} from 'react-router-dom';
 
 const SideBar = props => (
     <div className={classNames('sidebar', {'is-open': props.isOpen})}>
@@ -15,17 +16,25 @@ const SideBar = props => (
           <p>Dummy Heading</p>
           <SubMenu title="Home" icon={faHome} items={submenus[0]}/>
           <NavItem>
-            <NavLink href="#"><FontAwesomeIcon icon={faBriefcase} className="mr-2"/>About</NavLink>
+            <NavLink tag={Link} to={'/about'}>
+              <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>About
+            </NavLink>
           </NavItem>
           <SubMenu title="Pages" icon={faCopy} items={submenus[1]}/>
           <NavItem>
-            <NavLink href="#"><FontAwesomeIcon icon={faImage} className="mr-2"/>Portfolio</NavLink>
+            <NavLink tag={Link} to={'/pages'}>
+              <FontAwesomeIcon icon={faImage} className="mr-2"/>Portfolio
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#"><FontAwesomeIcon icon={faQuestion} className="mr-2"/>FAQ</NavLink>
+            <NavLink tag={Link} to={'/faq'}>
+              <FontAwesomeIcon icon={faQuestion} className="mr-2"/>FAQ
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#"><FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact</NavLink>
+            <NavLink tag={Link} to={'/contact'}>
+              <FontAwesomeIcon icon={faPaperPlane} className="mr-2"/>Contact
+            </NavLink>
           </NavItem>
         </Nav>
     </div>
