@@ -6,7 +6,7 @@ import SideBar from './components/sidebar/SideBar';
 import Content from './components/content/Content';
 import './App.css';
 
-export default () => {
+const App = () => {
 
   const [isOpen, setOpen] = useState(true)
   const toggle = () => setOpen(!isOpen)
@@ -21,3 +21,4 @@ export default () => {
   );
 }
 
+export default App

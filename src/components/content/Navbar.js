@@ -4,7 +4,7 @@ import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Button, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-export default props => {
+const Navbar = props => {
 
   const [isOpen, setOpen] = useState(true)
   const toggle = () => setOpen(!isOpen)
@@ -34,3 +34,5 @@ export default props => {
     </Navbar>
   );
 }
+
+export default Navbar

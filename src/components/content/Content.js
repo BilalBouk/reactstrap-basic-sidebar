@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import NavBar from './Navbar';
 
-export default props => (
+const Content = props => (
     <Container fluid className={classNames('content', {'is-open': props.isOpen})}>
       <NavBar toggle={props.toggle}/>
       <Switch>
@@ -26,3 +26,5 @@ export default props => (
       </Switch>
     </Container>
 )
+
+export default Content
