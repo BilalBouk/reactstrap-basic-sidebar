@@ -4,18 +4,18 @@ import { faAlignLeft } from '@fortawesome/free-solid-svg-icons';
 import { Navbar, Button, NavbarToggler, Collapse, Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-const Navbar = props => {
+const Topbar = ({ toggleSidebar }) => {
 
-  const [isOpen, setOpen] = useState(true)
-  const toggle = () => setOpen(!isOpen)
+  const [topbarIsOpen, setTopbarOpen] = useState(true)
+  const toggleTopbar = () => setTopbarOpen(!topbarIsOpen)
   
   return (
     <Navbar color="light" light className="navbar shadow-sm p-3 mb-5 bg-white rounded" expand="md">
-      <Button color="info" onClick={props.toggle}>
+      <Button color="info" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={faAlignLeft}/>
       </Button>
-      <NavbarToggler onClick={toggle} />
-      <Collapse isOpen={isOpen} navbar>
+      <NavbarToggler onClick={toggleTopbar} />
+      <Collapse isOpen={topbarIsOpen} navbar>
         <Nav className="ml-auto" navbar>
           <NavItem>
             <NavLink tag={Link} to={'/page-1'}>page 1</NavLink>
@@ -35,4 +35,4 @@ const Navbar = props => {
   );
 }
 
-export default Navbar
+export default Topbar

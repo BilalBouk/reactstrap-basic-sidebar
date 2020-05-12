@@ -8,14 +8,14 @@ import './App.css';
 
 const App = () => {
 
-  const [isOpen, setOpen] = useState(true)
-  const toggle = () => setOpen(!isOpen)
+  const [sidebarIsOpen, setSidebarOpen] = useState(true)
+  const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen)
 
   return (
     <Router>
       <div className="App wrapper">
-        <SideBar toggle={toggle} isOpen={isOpen}/>
-        <Content toggle={toggle} isOpen={isOpen}/>
+        <SideBar toggle={toggleSidebar} isOpen={sidebarIsOpen}/>
+        <Content toggleSidebar={toggleSidebar} sidebarIsOpen={sidebarIsOpen}/>
       </div>
     </Router>
   );

@@ -3,11 +3,11 @@ import classNames from 'classnames';
 import { Container } from 'reactstrap';
 import { Switch, Route } from 'react-router-dom';
 
-import NavBar from './Navbar';
+import Topbar from './Topbar';
 
-const Content = props => (
-    <Container fluid className={classNames('content', {'is-open': props.isOpen})}>
-      <NavBar toggle={props.toggle}/>
+const Content = ({ sidebarIsOpen, toggleSidebar }) => (
+    <Container fluid className={classNames('content', {'is-open': sidebarIsOpen})}>
+      <Topbar toggleSidebar={toggleSidebar}/>
       <Switch>
         <Route exact path="/" component={() => "Hello" } />
         <Route exact path="/about" component={() => "About" } />
