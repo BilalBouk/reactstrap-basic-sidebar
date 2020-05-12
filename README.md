@@ -1,7 +1,7 @@
 # reactstrap-basic-sidebar
 Static collapsible Bootstrap sidebar menu
 
-# Instalation
+# Installation
 ```
 npm install
 ```
