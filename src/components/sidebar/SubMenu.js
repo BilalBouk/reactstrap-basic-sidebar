@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 
 const SubMenu = (props) => {
   const [collapsed, setCollapsed] = useState(true);
-  const toggleNavbar = () => setCollapsed(!collapsed);
+  const toggle = () => setCollapsed(!collapsed);
   const { icon, title, items } = props;
 
   return (
     <div>
       <NavItem
-        onClick={toggleNavbar}
+        onClick={toggle}
         className={classNames({ "menu-open": !collapsed })}
       >
         <NavLink className="dropdown-toggle">
